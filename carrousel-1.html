@@ -8,31 +8,43 @@
     <title>Carrousel 1</title>
 </head>
 <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
     body {
-        margin: 0px;
+        font-size: 1.6rem;
+        /* background-color: #8F57FD; */
+        font-family: 'Muli', sans-serif;
     }
     
     .carrousel {
         width: 100%;
         overflow: scroll;
-        padding: 30px;
+        padding: 1rem;
         position: relative;
     }
     
     .carrousel__container {
         /* para que los elementos se coloquen uno junto a otro */
         white-space: nowrap;
-        margin: 70px 0px;
-        padding-bottom: 10px;
+        margin: 7rem 0;
+        padding-bottom: 1rem;
     }
     
     .carrousel-item {
         background-color: blue;
-        width: 200px;
-        height: 250px;
-        border-radius: 20px;
+        width: 20rem;
+        height: 25rem;
+        border-radius: 2rem;
         overflow: hidden;
-        margin-right: 10px;
+        margin-right: 1rem;
         display: inline-block;
         cursor: pointer;
         transition: 450ms all;
@@ -40,8 +52,8 @@
         position: relative;
     }
     
-    .carrousel-item:hover~.carrousel-item {
-        transform: translate3d(100px, 0, 0);
+    .carrousel-item:hover ~ .carrousel-item {
+        transform: translate3d(10rem, 0, 0);
     }
     
     .carrousel__container:hover .carrousel-item {
@@ -54,17 +66,17 @@
     }
     
     .carrousel-item__img {
-        width: 200px;
-        height: 250px;
+        width: 20rem;
+        height: 25rem;
         object-fit: cover;
     }
     
     .carrousel-item__details {
         background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-        font-size: 10px;
+        font-size: 1rem;
         opacity: 0;
         transition: 450ms opacity;
-        padding: 10px;
+        padding: 1rem;
         position: absolute;
         top: 0;
         left: 0;
@@ -75,35 +87,51 @@
     .carrousel-item__details:hover {
         opacity: 1;
     }
+
+    .carrousel-item__details img {
+        width: 4rem;
+    }
+
+    .carrousel-item__details--content {
+        position: absolute;
+        bottom: 1rem;
+        color: white;
+    }
+    
+    .carrousel_item__details--title {
+        font-size: 1.2rem;
+    }
+
 </style>
 
 <body>
-    <section class="carrousel">
-        <div class="carrousel__container">
-            <div class="carrousel-item">
-                <img class="carrousel-item__img" src="https://images.pexels.com/photos/1183434/pexels-photo-1183434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="gato">
-                <div class="carrousel-item__details">
-                    <div>
-                        <img src="/assets/img/play-icon.png" alt="play">
-                        <img src="/assets/img/plus-icon.png" alt="plus">
+    <main>
+        <section class="carrousel">
+            <div class="carrousel__container">
+                <div class="carrousel-item">
+                    <img class="carrousel-item__img" src="https://images.pexels.com/photos/1183434/pexels-photo-1183434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="gato">
+                    <div class="carrousel-item__details">
+                        <div class="carrousel-item__details--content">
+                            <img src="/assets/img/play-icon.png" alt="Play">
+                            <img src="/assets/img/plus-icon.png" alt="See more">
+                            <p class="carrousel_item__details--title">Título Descriptivo</p>
+                            <p class="carrousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                        </div>
                     </div>
-                    <p class="carrousel-item__details--title">Título Descriptivo</p>
-                    <p class="carrousel-item__details--subtitle">2019 16+ 114 minutos</p>
                 </div>
-
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
+                <div class="carrousel-item"></div>
             </div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-            <div class="carrousel-item"></div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 
 </html>
