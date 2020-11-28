@@ -1,0 +1,23 @@
+{
+  "name": "curso_basic_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomilto/curso_basic_frontend.git"
+  },
+  "author": "jomilto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jomilto/curso_basic_frontend/issues"
+  },
+  "homepage": "https://github.com/jomilto/curso_basic_frontend#readme"
+}
