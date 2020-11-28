@@ -320,6 +320,39 @@ ul:hover {
     font-size: 1.2rem;
 }
 
+.error {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-title {
+    font-size: 10rem;
+}
+
+.error--description {
+    font-size: 2rem;
+}
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 2.5s;
+}
+
 .footer {
     background-color: #8F57FD;
     display: flex;
